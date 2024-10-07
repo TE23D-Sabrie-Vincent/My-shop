@@ -45,23 +45,49 @@ System.Console.WriteLine($"Du har {Playeraura} aura points kvar");
 //         WhatToGetGet = Console
 //     }   
 
-WhatToget.TryParse
+string choice = Console.ReadLine();
+string amount = Console.ReadLine();
 
+int itemChoice;
+int itemAmount;
+
+if(int.TryParse(choice, out itemChoice))
+{
+    System.Console.WriteLine("Mycket bra val!");
+    System.Console.WriteLine("Hur många vill du ha???");
+    if(int.TryParse(amount, out itemAmount))
+    {
+        System.Console.WriteLine("Strålande!!!");
+    }
+    else
+    {
+        System.Console.WriteLine("Bruh, du är för fattig");
+    }
+}
+    else
+    {
+        System.Console.WriteLine("Bruh, du tror att jag säljer något som inte existerar... D;");
+    }
+
+// if (validChoice && itemChoice == 1) pricePerItem = 50;
+// else if (validChoice && itemChoice == 2) PricePerItem = 10;
+// else if (validChoice && itemChoice == 3) PricePerItem = 100;
+ 
 // WhatToGet = Console.ReadLine();
-int PriceForThing = 100;
+// int PriceForThing = 100;
 
-if (WhatToGet == "1")
-{
-    PriceForThing = 50;
-}
-else if (WhatToGet == "2")
-{
-    PriceForThing = 10;
-}
-else if (WhatToGet == "3")
-{
-    PriceForThing = 100;
-}
+// if (WhatToGet == "1")
+// {
+//     PriceForThing = 50;
+// }
+// else if (WhatToGet == "2")
+// {
+//     PriceForThing = 10;
+// }
+// else if (WhatToGet == "3")
+// {
+//     PriceForThing = 100;
+// }
 
 
 
