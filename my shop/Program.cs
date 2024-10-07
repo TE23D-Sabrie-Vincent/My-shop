@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 
 System.Console.WriteLine("Vad heter du??");
 
@@ -25,11 +26,54 @@ while (Namn.Length >= 7 )
 }
 
 
-int Playercash = 100;
+int Playeraura = 100;
 
-while (Playercash > 0)
+while (Playeraura > 0)
 {
+
     System.Console.WriteLine("Vad vill du skaffa???");
+    System.Console.WriteLine("1. Theodors gyatt (50kr)");
+    System.Console.WriteLine("2. Simons matteformel (10kr)");
+    System.Console.WriteLine("3. Bra skolmat (100kr)");
+
+System.Console.WriteLine($"Du har {Playeraura} aura points kvar");
+
+// string WhatToGet = "";
+// while (WhatToGet != "1" && WhatToGet != "2" && WhatToGet != "3")
+//     {   
+//         System.Console.WriteLine("Dumb ass, du har inte så många rättigheter!");
+//         WhatToGetGet = Console
+//     }   
+
+WhatToget.TryParse
+
+// WhatToGet = Console.ReadLine();
+int PriceForThing = 100;
+
+if (WhatToGet == "1")
+{
+    PriceForThing = 50;
+}
+else if (WhatToGet == "2")
+{
+    PriceForThing = 10;
+}
+else if (WhatToGet == "3")
+{
+    PriceForThing = 100;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 Console.ReadLine();
+}
+
