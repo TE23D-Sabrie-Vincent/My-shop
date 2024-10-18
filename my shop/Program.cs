@@ -30,11 +30,11 @@ while (Playeraura > 0)
 {
     System.Console.WriteLine($"Du har {Playeraura} kvar");
     System.Console.WriteLine("Vad vill du skaffa???");
-    System.Console.WriteLine("1. Theodors gyatt (50kr)");
-    System.Console.WriteLine("2. Simons matteformel (10kr)");
-    System.Console.WriteLine("3. Bra skolmat (100kr)");
+    System.Console.WriteLine("1. Theodors gyatt (50 aura points)");
+    System.Console.WriteLine("2. Simons matteformel (10 aura points)");
+    System.Console.WriteLine("3. Bra skolmat (100 aura points)");
 
-System.Console.WriteLine($"Du har {Playeraura} aura points kvar");
+System.Console.WriteLine($"Du har {Playeraura} aura points!!!");
 
 // string WhatToGet = "";
 // while (WhatToGet != "1" && WhatToGet != "2" && WhatToGet != "3")
@@ -66,73 +66,79 @@ if (itemChoice == 1)
     {
         
         int totalcost = itemAmount * 50;
-        if (totalcost >= 0 )
+        if (Playeraura >= totalcost)
         {
-            System.Console.WriteLine("Ok, koolt");
+            System.Console.WriteLine("Ok, GYATTT");
             Playeraura -= itemAmount * 50;
             System.Console.WriteLine($"Ok, {Namn} Du har {Playeraura} kvar");
         }
-        if (totalcost <= 0)
+        else if (Playeraura <= totalcost)
         {
             System.Console.WriteLine("Du är för fattig");
             
         }
         
     }
-    
-    //     System.Console.WriteLine("Strålande!!!\n");
-    //     System.Console.WriteLine("Hur många vill du ha??");
-    //     amount = Console.ReadLine();
-    //     int.TryParse(itemAmount, out amount);
-    //     int totalcost = itemAmount*50;
-
-    // }
-
 }
 
-// if (totalcost <= Playeraura)
-// {
-
-// } 
-   
-    
-    //     if (totalcost <= 0) 
-    // {
+if (itemChoice == 2)
+{
+    System.Console.WriteLine("Mycket bra val!");
+    System.Console.WriteLine("Hur många vill du ha???");
+    string amount = Console.ReadLine();
+    int.TryParse(amount, out itemAmount);
+    {
         
-    //     System.Console.WriteLine("Bruh, du är för fattig");
-    // }
+        int totalcost = itemAmount * 10;
+        if (Playeraura >= totalcost )
+        {
+            System.Console.WriteLine("Ok, nörd.");
+            Playeraura -= itemAmount * 10;
+            System.Console.WriteLine($"Ok, {Namn} Du har {Playeraura} kvar");
+        }
+        else if (Playeraura <= totalcost)
+        {
+            System.Console.WriteLine("Du är för fattig");
+            
+        }
+        
+    }
+}
 
-// if (validChoice && itemChoice == 1) pricePerItem = 50;
-// else if (validChoice && itemChoice == 2) PricePerItem = 10;
-// else if (validChoice && itemChoice == 3) PricePerItem = 100;
- 
-// WhatToGet = Console.ReadLine();
-// int PriceForThing = 100;
-
-// if (WhatToGet == "1")
-// {
-//     PriceForThing = 50;
-// }
-// else if (WhatToGet == "2")
-// {
-//     PriceForThing = 10;
-// }
-// else if (WhatToGet == "3")
-// {
-//     PriceForThing = 100;
-// }
-
-
-
-
-
-
-
-
-
+if (itemChoice == 3)
+{
+    System.Console.WriteLine("Mycket bra val!");
+    System.Console.WriteLine("Hur många vill du ha???");
+    string amount = Console.ReadLine();
+    int.TryParse(amount, out itemAmount);
+    {
+        
+        int totalcost = itemAmount * 100;
+        if (Playeraura >= totalcost )
+        {
+            System.Console.WriteLine("Ok, Detta låter gott :D");
+            Playeraura -= itemAmount * 100;
+            System.Console.WriteLine($"Ok, {Namn} Du har {Playeraura} kvar");
+        }
+        else if (Playeraura <= totalcost)
+        {
+            System.Console.WriteLine("Du är för fattig");
+            
+        }    
+    }
+}
 
 
 
 Console.ReadLine();
 }
+
+
+
+
+
+
+
+
+
 
